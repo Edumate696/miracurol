@@ -18,4 +18,3 @@ class Config:
         PORT = 'server.port'
         ROUTER = 'server.router'
         WORKER_COUNT = 'server.worker.count'
-        WORKER_CLASS = 'server.worker.class'
