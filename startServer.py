@@ -7,7 +7,7 @@ if __name__ == '__main__':
     init_configs()
 
     # Run Database Migration Scripts
-    # run_migrations()
+    run_migrations()
 
     # Start Server
     start_server()
