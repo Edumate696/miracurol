@@ -1,52 +1,27 @@
-from fastapi.responses import HTMLResponse
+description = """
+One platform for many solutions regarding health issues. 🚀
 
+![](https://img.shields.io/website?url=https%3A%2F%2Fgcettbiaans22.herokuapp.com%2Fapi%2Fdocs)
+![](https://img.shields.io/github/contributors/GCETTB-HYLAND-HACK-22/Miracurol-Rebuild)
+![](https://img.shields.io/github/commit-activity/m/GCETTB-HYLAND-HACK-22/Miracurol-Rebuild)
+![](https://img.shields.io/github/last-commit/GCETTB-HYLAND-HACK-22/Miracurol-Rebuild)
 
-def get_rapidoc_html(
-        *,
-        openapi_url: str,
-        title: str,
-        rapidoc_js_url: str = "https://cdn.jsdelivr.net/npm/rapidoc@9.1.3/dist/rapidoc-min.js",
-        rapidoc_favicon_url: str = None
-) -> HTMLResponse:
-    html = f"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-        <title>{title}</title>
-        <!-- needed for adaptive design -->
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-        """
-    if rapidoc_favicon_url:
-        html += """
-        <link rel="shortcut icon" href="{rapidoc_favicon_url}">
-        """
-    html += f"""
-        <style>
-            rapi-doc{{
-                width:100%;
-            }}
-        </style>
-        <script type="module" src="{rapidoc_js_url}"></script>
-        </head>
-        <body>
-        <rapi-doc
-            allow-authentication = "true" 
-            allow-search = "true"
-            show-info = "true"
-            spec-url = "{openapi_url}"
-            theme = "dark"
-            primary-color = "#34A853"
-            mono-font = "Roboto Mono"
-            render-style = "read"
-            allow-try = "true"
-            schema-style = "tree"
-            show-header = "true"
-            heading-text = "{title}"
-            allow-spec-file-load = "false"
-        >
-        </rapi-doc>
-        </body>
-        </html>
-        """
-    return HTMLResponse(html)
+## Main features
+
+- FastAPI as the framework
+    - Runs on Python
+    - RESTful API
+- Access-Token based Authentication
+- Security
+    - One-way Hashing for Password Management
+    - Non-public pieces of information can't be accessed without a proper access token
+- Built-in ML models for Medical Health Detection
+- Built-in PostgreSQL support
+"""
+
+tags_metadata = [
+    {
+        'name': 'users',
+        'description': 'Operations with users. The **login** logic is also here.'
+    },
+]

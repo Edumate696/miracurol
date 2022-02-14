@@ -1,18 +1,22 @@
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
 
-from backend.core.docs import get_rapidoc_html
+from backend.core.docs import description, tags_metadata
+from backend.resources.user import user_router
 
 router = FastAPI(
     title='Miracurol API',
-    docs_url=None, redoc_url=None,
+    description=description,
+    version='un-versioned',
+    contact={},
+    license_info={
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+    },
+    openapi_tags=tags_metadata,
+    docs_url=None,
+    redoc_url=None,
+    swagger_ui_parameters={},
 )
 
-
-# Attach api docs endpoint
-@router.get('/api/docs', include_in_schema=False)
-async def get_rapidoc() -> HTMLResponse:
-    return get_rapidoc_html(
-        openapi_url=router.openapi_url,
-        title=f'{router.title} Docs'
-    )
+# Attach User resource
+router.include_router(user_router)
