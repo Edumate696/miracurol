@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from backend.core.docs import description, tags_metadata
-from backend.resources.user import user_router
+from backend.resources.user import router as user_router
 
 router = FastAPI(
     title='Miracurol API',
@@ -13,7 +13,7 @@ router = FastAPI(
         "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
     },
     openapi_tags=tags_metadata,
-    docs_url=None,
+    docs_url='/api/docs',
     redoc_url=None,
     swagger_ui_parameters={},
 )

@@ -26,7 +26,7 @@ CREATE TABLE user (
 import sqlalchemy as sa
 from alembic import op
 
-revision = 'v1_create_user_schema'
+revision = 'v1'
 down_revision = None
 
 
