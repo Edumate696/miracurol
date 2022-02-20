@@ -30,3 +30,14 @@ class EntityUser(EntityBase):
     created_at: datetime = Column('created_at', DateTime)
     updated_at: datetime = Column('updated_at', DateTime)
     last_known_loc: str | None = Column('last_known_loc', String)
+
+
+class EntityDoctor(EntityBase):
+    """Represents all the doctors in the entire application"""
+    __tablename__ = 'doctor'
+
+    # Columns
+    id: int = Column('id', Integer, primary_key=True)
+    root_id: int = Column('root_id', Integer)
+    professional_statement: str = Column('professional_statement', String)
+    practicing_from: datetime = Column('practicing_from', DateTime)
