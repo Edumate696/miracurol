@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 from backend.core.docs import description, tags_metadata
 from backend.resources.user import router as user_router
@@ -20,3 +21,5 @@ router = FastAPI(
 
 # Attach User resource
 router.include_router(user_router)
+
+router.mount('/', StaticFiles(directory='test-app/dist/test-app'), name='static')
