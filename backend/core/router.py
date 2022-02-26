@@ -22,4 +22,5 @@ router = FastAPI(
 # Attach User resource
 router.include_router(user_router)
 
-router.mount('/', StaticFiles(directory='test-app/dist/test-app'), name='static')
+# Attach Front End
+router.mount('/', StaticFiles(directory='app', html=True), name='static')
