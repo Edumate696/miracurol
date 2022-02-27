@@ -8,7 +8,7 @@ angular.module('miracurolApp', ['ui.router'])
             enabled: true,
             requireBase: false
         });
-        $urlRouterProvider.otherwise('/');
+        // $urlRouterProvider.otherwise('/');
 
         // creating routes or states
         $stateProvider

@@ -1,5 +1,3 @@
 /*global angular*/
 
-angular.module('miracurolApp', [
-    'ui.router'
-]);
+angular.module('miracurolApp', ['ui.router']);
