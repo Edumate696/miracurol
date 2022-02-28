@@ -1,23 +1,26 @@
 <!doctype html>
 <html lang="en" ng-app="miracurolApp">
 <head>
+    <title>Miracurol - Health Tracker App</title>
+
+    <!-- Required Meta -->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Miracurol - Health Tracker App</title>
 
-    <!-- css -->
+    <!-- Bootstrap Css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"
           crossorigin="anonymous"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
           crossorigin="anonymous"/>
 
+    <!-- Style Sheets -->
     <link href="css/sb-admin-theme.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
 
-    <!-- js -->
+    <!-- 3-p Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"
@@ -26,6 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
             crossorigin="anonymous"></script>
 
+    <!-- App Scripts -->
     <script src="app.js"></script>
 </head>
 <body class="sb-nav-fixed">
@@ -78,21 +82,21 @@
     </nav>
 </header>
 
-<!-- SIDEBAR -->
 <div id="layoutSidenav">
+
+    <!-- SIDEBAR -->
     <div id="layoutSidenav_nav">
         <nav id="sidenavAccordion" class="sb-sidenav accordian sb-sidenav-dark">
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link">
+                    <a class="nav-link" ui-sref="home">
                         <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                        Dashboard
+                        Home
                     </a>
-                    <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link">
-                        <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                        Dashboard
+                    <a class="nav-link" ui-sref="about">
+                        <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
+                        About
                     </a>
                 </div>
             </div>
@@ -102,16 +106,17 @@
             </div>
         </nav>
     </div>
+
+    <!-- CONTENT -->
     <div id="layoutSidenav_content">
         <main>
-            <div ui-view="content"></div>
+            <div ui-view="content" class="container-fluid px-4"></div>
         </main>
     </div>
 </div>
 
-<!-- CONTENT -->
-
 <!-- FOOTER -->
+<footer></footer>
 
 </body>
 </html>
