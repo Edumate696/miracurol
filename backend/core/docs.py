@@ -2,9 +2,9 @@ description = """
 One platform for many solutions regarding health issues. 🚀
 
 ![](https://img.shields.io/website?url=https%3A%2F%2Fmiracurol.herokuapp.com)
-![](https://img.shields.io/github/contributors/GCETTB-HYLAND-HACK-22/Miracurol-Rebuild)
-![](https://img.shields.io/github/commit-activity/m/GCETTB-HYLAND-HACK-22/Miracurol-Rebuild)
-![](https://img.shields.io/github/last-commit/GCETTB-HYLAND-HACK-22/Miracurol-Rebuild)
+![](https://img.shields.io/github/contributors/GCETTB-HYLAND-Hackathon2012-22/Miracurol-Rebuild)
+![](https://img.shields.io/github/commit-activity/m/GCETTB-HYLAND-Hackathon2012-22/Miracurol-Rebuild)
+![](https://img.shields.io/github/last-commit/GCETTB-HYLAND-Hackathon2012-22/Miracurol-Rebuild)
 
 ## Main features
 
