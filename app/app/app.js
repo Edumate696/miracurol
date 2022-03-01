@@ -1,21 +1,18 @@
-/*global angular*/
+(function () {
+    'use strict';
 
-'use strict';
+    const app = angular.module('miracurolApp', ['ui.router']);
 
-angular.module('miracurolApp', ['ui.router'])
-    .config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
+    app.config(function ($stateProvider, $locationProvider) {
         // Enable HTML-5 Mode
         $locationProvider.html5Mode({
             enabled: true, requireBase: false
         });
 
-        // Default to 'https://<base url>/'
-        $urlRouterProvider.otherwise('/');
-
         // creating routes or states
         $stateProvider
             .state({
-                name: 'home', url: '/', views: {
+                name: 'home', views: {
                     "content": {
                         template: '<h1 class="mt-4">This is Home Page</h1>',
                     }
@@ -29,3 +26,10 @@ angular.module('miracurolApp', ['ui.router'])
                 },
             });
     });
+
+    app.run(function ($state) {
+        $state.go('home');
+    });
+
+    return app;
+}());
