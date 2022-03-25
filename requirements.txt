@@ -1,5 +1,5 @@
 # Server
-fastapi~=0.73.0
+fastapi~=0.75.0
 gunicorn~=20.1.0
 uvicorn[standard]~=0.17.5
 
@@ -10,6 +10,10 @@ alembic~=1.7.5
 
 # Modeling
 pydantic[email]~=1.9.0
+
+# Security
+pyjwt[crypto]~=2.3.0
+passlib[bcrypt]~=1.7.4
 
 # Productivity
 python-dotenv~=0.19.2
