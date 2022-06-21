@@ -4,7 +4,7 @@ import psutil
 import uvicorn
 
 # Configuration Defaults
-os.environ.setdefault('WEB_HOST', '127.0.0.1')
+os.environ.setdefault('WEB_HOST', '0.0.0.0')
 os.environ.setdefault('WEB_PORT', os.getenv('PORT', '8080'))
 
 # Detect max web-concurrency from OS information
