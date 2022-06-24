@@ -18,4 +18,4 @@ router.add_middleware(
 )
 
 # Front End
-router.mount('/', StaticFiles(directory='www/dist/www', html=True), name='static')
+router.mount('/', StaticFiles(directory='web/dist', html=True), name='static')
