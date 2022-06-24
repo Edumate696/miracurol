@@ -3,7 +3,7 @@
         "node": "16.x"
     },
     "scripts": {
-        "postinstall": "cd web && npm install",
+        "postinstall": "cd web && npm install --production=false",
         "build": "cd web && npm run build"
     }
 }
