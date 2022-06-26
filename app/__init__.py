@@ -1,7 +1,10 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+# Base Application
 router = FastAPI()
 
 # CORS (Cross-Origin Resource Sharing)
@@ -17,5 +20,8 @@ router.add_middleware(
     allow_headers=['*'],
 )
 
-# Front End
-router.mount('/', StaticFiles(directory='web/dist', html=True), name='static')
+# Bind Frontend UI
+if 'WEB_ROOT' not in os.environ:
+    os.environ['WEB_ROOT'] = os.path.join(os.path.dirname(__file__), 'http', 'web-app', 'dist')
+
+router.mount('/', StaticFiles(directory=os.getenv('WEB_ROOT'), check_dir=True, html=True))

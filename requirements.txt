@@ -5,6 +5,7 @@ uvicorn[standard]~=0.17.6
 
 # Database
 alembic~=1.8.0
+SQLAlchemy~=1.4.39
 
 # Modeling
 pydantic[email]~=1.9.1
