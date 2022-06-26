@@ -10,11 +10,12 @@ else
 endif
 
 configure:
-	@pip install -r "./requirements.txt"
+	@pip install --user poetry
+	@poetry install --no-dev --remove-untracked
 	@cd "${WEB_ROOT}" && npm install
 
 serve:
-	@python -m app
+	@poetry run python -m app
 
 build-web:
 	@cd "${WEB_ROOT}" && npm run build

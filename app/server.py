@@ -13,8 +13,7 @@ if 'WEB_CONCURRENCY' not in os.environ:
 
 
 def serve_uvicorn(app: str):
-    # Start Uvicorn Server
-    uvicorn.run(
+    config = uvicorn.Config(
         app=app,
         host=os.getenv('WEB_HOST'),
         port=int(os.getenv('WEB_PORT')),
@@ -22,7 +21,13 @@ def serve_uvicorn(app: str):
         # TODO: Uvicorn has a bug with multiple workers
         # workers=int(os.getenv('WEB_CONCURRENCY')),
         workers=1,
+        log_level='info',
     )
+
+    server = uvicorn.Server(config)
+
+    # Start Uvicorn Server
+    server.run()
 
 
 def serve_gunicorn(app: str):
