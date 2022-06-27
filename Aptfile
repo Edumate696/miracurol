@@ -1,0 +1,4 @@
+make
+nodejs
+python3.10
+python3-poetry

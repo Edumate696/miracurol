@@ -10,7 +10,7 @@ else
 endif
 
 configure:
-	@python -m pip install poetry
+#	@python -m pip install poetry
 	@python -m poetry install --remove-untracked
 	@cd "${WEB_ROOT}" && npm install
 
