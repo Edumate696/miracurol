@@ -11,11 +11,11 @@ endif
 
 configure:
 #	@python -m pip install poetry
-	@python -m poetry install --remove-untracked
+	@poetry install --remove-untracked
 	@cd "${WEB_ROOT}" && npm install
 
 serve:
-	@python -m poetry run python -m app
+	@poetry run python -m app
 
 build-web:
 	@cd "${WEB_ROOT}" && npm run build
